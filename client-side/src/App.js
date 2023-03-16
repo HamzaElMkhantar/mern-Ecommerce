@@ -1,16 +1,26 @@
-import './App.css';
-import Footer from './Footer';
-import Header from './Header';
+
+import { Container } from 'react-bootstrap';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import HomeScreen from './screens/HomeScreen';
+import {BrowserRouter as Router  , Route, Routes } from 'react-router-dom'
+import Product from './components/Product';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header/>
-      <h1>
-        hello react
-      </h1>
+      <main className='py-3 '>  
+          <Container>
+          <Routes>
+            <Route index element={<HomeScreen/>} exact />
+            <Route path="/product/:id" element={<ProductScreen />} />
+          </Routes>
+          </Container>
+      </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
