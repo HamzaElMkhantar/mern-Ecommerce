@@ -1,0 +1,34 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "ecommerce website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-side/server",
+    "server": "nodemon server-side/server",
+    "client": "npm start --prefix client-side",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server-side/seeder",
+    "data:destroy": "node server-side/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamzaElMkhantar/mern-Ecommerce.git"
+  },
+  "author": "Hamza El Mkhantar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HamzaElMkhantar/mern-Ecommerce/issues"
+  },
+  "homepage": "https://github.com/HamzaElMkhantar/mern-Ecommerce#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21"
+  }
+}
