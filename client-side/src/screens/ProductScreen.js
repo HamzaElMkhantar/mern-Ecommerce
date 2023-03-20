@@ -81,22 +81,22 @@ function ProductScreen({props}) {
                             {
                                 product.countInStock > 0 &&
                                 <ListGroupItem>
-                                <Row style={{display:'flex' , alignItems:'center'}} >
-                                <Col>QTY : </Col>
-                                    <Col>
-                                        <FormControl
-                                            style={{cursor:'po'}}
-                                            as='select'
-                                            value={qty}
-                                            onChange={(e) => setQty(e.target.value)} >
-                                            {
-                                                [...Array(product.countInStock).keys()].map((item) => (
-                                                    <option key={item + 1} value={item + 1} >{item + 1}</option>
-                                                ))
-                                            }
-                                        </FormControl>
-                                    </Col>
-                                </Row>
+                                    <Row style={{display:'flex' , alignItems:'center'}} >
+                                        <Col>QTY :</Col>
+                                        <Col >
+                                            <FormControl
+                                                style={{cursor:'pointer'}}
+                                                as='select'
+                                                value={qty}
+                                                onChange={(e) => setQty(e.target.value)} >
+                                                {
+                                                    [...Array(product.countInStock).keys()].map((item) => (
+                                                        <option key={item + 1} value={item + 1} >{item + 1}</option>
+                                                    ))
+                                                }
+                                            </FormControl>
+                                        </Col>
+                                    </Row>
                             </ListGroupItem>
                             }
                             <Button
