@@ -25,3 +25,8 @@ app.use('/api/users' , userRoutes)
 const PORT = process.env.PORT || 4500
 
 app.listen(PORT ,console.log('server running on port : ' + PORT ))
+
+
+// ----------- ODC ADDRESS IP ---------- 
+// home :  192.168.1.4
+// =========  192.168.8.118 ===========
