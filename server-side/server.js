@@ -27,6 +27,7 @@ const PORT = process.env.PORT || 4500
 app.listen(PORT ,console.log('server running on port : ' + PORT ))
 
 
-// ----------- ODC ADDRESS IP ---------- 
-// home :  192.168.1.4
-// =========  192.168.8.118 ===========
+// ----------- Proxy ---------- 
+// home 5G :  192.168.1.4
+// home 5G :  192.168.1.3
+// ODC     :  192.168.8.118

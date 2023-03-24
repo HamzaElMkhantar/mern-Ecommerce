@@ -7,7 +7,7 @@ const generateToken = require('../utils/generateToken');
 const authUsers = expressAsyncHandler(async (req, res) => {
 
     const { email , password } = req.body ;
-    
+
     const user = await User.findOne({email})
 
     if(user && (await user.matchPassword(password)) ){
@@ -51,10 +51,12 @@ const authUsers = expressAsyncHandler(async (req, res) => {
 const registerUser = expressAsyncHandler( async (req, res) => {
     const {name , email , password} = req.body ;
 
+    console.log(name , email , password)
     const existUser = await User.findOne({email})
     if(existUser){
         res.status(400)
         throw new Error('Email Already Exists')
+        // return res.json({error : 'Email Already Exists'})
     }
 
     const hashedPssword = await bcrypt.hash(password , 10)
@@ -66,9 +68,10 @@ const registerUser = expressAsyncHandler( async (req, res) => {
 
     })
 
+    console.log(newUser)
     if(newUser){
 
-        res.status(201).json({
+        return res.send({
             _id: newUser._id,
             name: newUser.name,
             email: newUser.email,
@@ -98,9 +101,38 @@ const getUserProfile = expressAsyncHandler( async (req , res) => {
     }
 })
 
+const updateUserProfile = expressAsyncHandler( async (req,res) => {
+
+    const user = await User.findById(req.user._id)
+
+    if(user){
+        user.name = req.body.name || user.name
+        user.email = req.body.email || user.email
+        if(req.body.password){
+            const newHashedPassword = bcrypt.hash(req.body.password , 10)
+
+            user.password = newHashedPassword ;
+        }
+
+        const updatedUser = await user.save()
+        
+        return res.send({
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            isAdmin: updatedUser.isAdmin,
+            token : generateToken(updatedUser._id)
+        })
+
+    }else{
+        res.status(404)
+        throw new Error("User Not Found")
+    }
+})
 
 module.exports = {
     authUsers,
     getUserProfile,
-    registerUser
+    registerUser,
+    updateUserProfile
 }
