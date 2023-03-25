@@ -92,7 +92,7 @@ function RegisterScreen() {
               </Form.Control>
            </Form.Group>
 
-           <Button  style={{borderRadius:'.3rem' , margin:'auto' , display:'flex' , justifyContent:'center'}} type='submit' variant='primary' >
+           <Button style={{borderRadius:'.3rem' , margin:'auto' , display:'flex' , justifyContent:'center'}} type='submit' variant='primary' >
             Register
            </Button>
         </Form>

@@ -67,8 +67,6 @@ const registerUser = expressAsyncHandler( async (req, res) => {
         password: hashedPssword
 
     })
-
-    console.log(newUser)
     if(newUser){
 
         return res.send({
@@ -102,18 +100,22 @@ const getUserProfile = expressAsyncHandler( async (req , res) => {
 })
 
 const updateUserProfile = expressAsyncHandler( async (req,res) => {
+    const {name , email , password , id} = req.body
 
-    const user = await User.findById(req.user._id)
+    const user = await User.findById(id)
+
+    
 
     if(user){
-        user.name = req.body.name || user.name
-        user.email = req.body.email || user.email
-        if(req.body.password){
-            const newHashedPassword = bcrypt.hash(req.body.password , 10)
+
+        user.name = name || user.name
+        user.email = email || user.email
+        if(password){
+            const newHashedPassword = await bcrypt.hash(password , 10)
 
             user.password = newHashedPassword ;
-        }
 
+        }
         const updatedUser = await user.save()
         
         return res.send({

@@ -21,12 +21,12 @@ export const login = (password,email) => async (dispatch) => {
         dispatch({
             type: USER_LOGIN_REQUIST
         })
+        
         const config = {
             Headers: {
               'Content-Type': 'application/json'
             }
           }
-        
 
         const {data} = await axios.post(`/api/users/login`, 
                         {password, email},
@@ -109,10 +109,10 @@ export const getUserProfile = (profile) => async (dispatch , getState) => {
         console.log(userInfo)
 
         const config = {
-            Headers:{
-                'Content-Type':'application/json',
-                Authorization : `Bearer ${userInfo.token}`
-            },
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${userInfo && userInfo.token}`,
+              },
         }
 
         const { data } = await axios.get(`/api/users/${profile}` , config)
@@ -136,28 +136,32 @@ export const getUserProfile = (profile) => async (dispatch , getState) => {
 }
 
 export const  updateUserProfile = (user) => async (dispatch , getState) => {
+    // console.log(user)
     try{
 
         dispatch({
             type : USER_UPDATE_PROFILE_REQUIST
         })
 
-        const {userLogin : { userInfo }} = getState()
-
-        console.log(userInfo)
+        const  userInfo =  JSON.parse(localStorage.getItem('userInfo'))
 
         const config = {
-            Headers:{
-                'Content-Type':'application/json',
-                Authorization : `Bearer ${userInfo.token}`
-            },
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${userInfo && userInfo.token}`,
+              },
         }
 
         const { data } = await axios.put(`/api/users/profile` , user ,  config)
+
         dispatch({
             type : USER_UPDATE_PROFILE_SUCCESS,
             payload : data 
         })
+
+        console.log('data' , data)
+        localStorage.setItem('userInfo' , JSON.stringify(data))
+
 
     }catch(error){
         console.log(error)
