@@ -16,8 +16,8 @@ function LoginScreen() {
 
   const userLogin = useSelector(state => state.userLogin)
 
-  const { loading , error , userInfo } = userLogin
-
+  const { loading , error } = userLogin
+  const  userInfo = userLogin.userInfo || JSON.parse(localStorage.getItem('userInfo'))
   const location = useLocation()
 
   const redirect = location.search ? location.search.split('=')[1] : '/' ;

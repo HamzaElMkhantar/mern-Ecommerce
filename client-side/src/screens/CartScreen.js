@@ -33,10 +33,22 @@ const CartScreen = () => {
     dispatch(removeFromCart(id))
   }
 
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'))
+
   const navigate = useNavigate()
   const checkoutHandler = async () => {
-    // await dispatch(addToCart(productId, qty))
-    navigate('/login?redirect=shipping')
+    if(!userInfo){
+      // navigate('/login?redirect=/shipping')
+      navigate('/login')
+    }else{
+      navigate('/shipping')
+      // await dispatch(addToCart(productId, qty))
+    }
+  }
+
+  if(!userInfo){
+    // navigate('/login?redirect=/shipping')
+    navigate('/login')
   }
 
   return (

@@ -19,8 +19,9 @@ function RegisterScreen() {
 
   const userRegister = useSelector(state => state.userRegister)
 
-  const { loading , error , userInfo } = userRegister
+  const { loading , error } = userRegister
 
+  const  userInfo = userRegister.userInfo || JSON.parse(localStorage.getItem('userInfo'))
 
 
   const location = useLocation()

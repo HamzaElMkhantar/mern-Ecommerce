@@ -48,6 +48,15 @@ const orderSchema = mongoose.Schema({
         required: true,
         default: 0.0
     },
+    cartItems:{
+        type :String
+    },
+    itemsPrice:{
+        type: String
+    },
+    totalPrice:{
+        type : String
+    },
     isPayed:{
         type: Boolean , 
         required: true,
