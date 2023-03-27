@@ -4,6 +4,9 @@ const dotenv = require('dotenv')
 const connectDB = require('./config/db')
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/userRoutes')
+const orderRoute = require('./routes/orderRoute')
+const {notFound, errorHandler} = require('./middleware/errorMiddleware')
+
   
 
 dotenv.config()
@@ -20,11 +23,16 @@ app.get('/' , (req,res) => {
 
 app.use('/api/products' , productRoutes)
 app.use('/api/users' , userRoutes)
+app.use('/api/orders' , orderRoute)
 
 
 const PORT = process.env.PORT || 4500
 
-app.listen(PORT ,console.log('server running on port : ' + PORT ))
+app.listen(
+    PORT ,
+    console.log(`server runnig in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+    )
+)
 
 
 // ----------- Proxy ---------- 
