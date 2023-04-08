@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const  User =  require("./userModel.js");
 
 const orderSchema = mongoose.Schema({
     user:{

@@ -1,5 +1,265 @@
 *{
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+.contner{
+  width: 80%;
+  margin: auto; 
+   padding-top: 90px;
+}
+
+.userdashboard , .addproducts{
+    width: 100%;
+    height: 93.5vh;
+    margin-top: 40px;
+    display: flex;
+}
+
+.sidebar {
+  background-color: #1c1b28;
+  height: 93.5vh;
+  width: 250px;
+  color: rgb(175, 176, 178) !important;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+.sidebar:hover{
+  margin-left: 0px;
+
+}
+.sidebarList{
+  width: 100%;
+  margin-left: 3%;
+  height: auto;
+  padding: 15px 0px;
+  
+}
+
+.sidebarList .row {
+  border-radius: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 15px 5px;
+  margin-bottom: 15px; 
+  list-style-type: none;
+  display: inline-table;
+  transition: all .2s ease;
+ 
+}
+
+.seconIcon{
+  position: absolute;
+  left: 80%;  
+}
+
+.sidebarList .row:hover{
+  background-color: #424148;
+}
+
+
+.userinfo{
+  margin-top: 30px;
+  text-align: center;
+  border-bottom: .5px solid rgb(136, 134, 134);
+  width: 90%;
+  margin-left: 3%;
+}
+.userinfo h4{
+  color: #dedde1 ;
+  font-size: 13px;
+  transition: all .2s ease;
+}
+.userinfo p {
+  font-size: 11px;
+  transition: all .2s ease;
+}
+.dashboardName h4{
+  border-bottom: .5px solid rgb(136, 134, 134);
+  margin-top: 20px;
+  color: #dedde1 ;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.menuIcon{
+  font-size: 25px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.secondList{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  list-style: none;
+  margin-top: 50px;
+  margin-right: -5px;
+  transition: all .2s ease;
+}
+
+.secondList li{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.secondList li:hover{
+  
+  background-color: #424148;
+
+}
+
+.dashboardmenu{
+  background-color: #f4f7fa;
+  height: 94vh;
+  width: 100%;
+  padding: 30px 10px;
+  overflow-y: scroll;
+}
+
+.dasboardCard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content{
+  width: 45%;
+  height: 180px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.card-content i {
+  color: #1c1b2891;
+   font-size: 30px;
+   margin-bottom: 10px;
+}
+
+.homeChar .char {
+  width: 97%;
+}
+.homeChar h5 {
+  text-align: center;
+}
+.table-container{
+  text-align: center;
+  width: 46%;
+}
+
+.addproducts-content{
+  width: 100%;
+  margin-top: -20px;
+  
+}
+
+.addProductsForm input , .addProductsForm textarea{
+  background-color: #ffffff;
+  border: 1px solid lightgray !important;
+  
+}
+
+#activ {
+  background-color: #f4f7fa;
+  color: #1c1b28 !important;
+  margin-left: 28px;
+  transition: all .3s ease;
+}
+
+.order-dashboard{
+  display: flex;
+   background-color: #f4f7fa;
+   margin-top: 40px;
+}
+.order-dashboard-content{
+  padding: 20px;
+}
+
+.home-tables{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.home-tables .table.table-bordered  {
+  width: 98%;
+  margin:0 auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  .home-tables {
+    flex-direction: column;
+  }
+  .home-tables .table.table-bordered {
+    margin-bottom: 20px;
+  }
+}
+
+.productsDashboard{
+  display: flex;
+  margin-top: 40px;
+  background-color: #f4f7fa;
+}
+.productsDashboard-content{
+  margin: 20px;
+  height: 93vh;
+  overflow-y: scroll;
+  margin: 30px auto;
+}
+.productsDashboard-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.formUpdateContainer{
+  background-color: rgba(58, 58, 58, 0.356);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* filter: blur(2px); */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.formUpdateContainer .formContainer{
+  margin-top: 0px;
+  background-color: #ffffff !important;
+  width: 60%;
+  height: 87%;
+  border-radius: 20px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+}
+.updateProductsForm input , .updateProductsForm textarea{
+  border: 1px solid lightgray !important;
 }

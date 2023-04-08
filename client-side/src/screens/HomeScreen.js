@@ -24,7 +24,7 @@ function HomeScreen() {
   } , [dispatch] )
 
   return (
-    <div>
+    <div className='contner' style={{}}>
         <h1>Latest Products</h1>
  
           

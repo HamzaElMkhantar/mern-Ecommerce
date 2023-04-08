@@ -29,7 +29,7 @@ function ShippinScreen() {
     }
 
   return (
-    <Row  >
+    <Row  className='contner' >
     <CheckOutSteps step1 step2 />
         <Col md={12}>
     <FormContainer  >
@@ -66,7 +66,7 @@ function ShippinScreen() {
             </Form.Group>
 
             <Form.Group style={{marginBottom:'20px'}} controlId='country'>
-                <Form.Label>Password Address</Form.Label>
+                <Form.Label>Country</Form.Label>
                     <Form.Control
                     type='text'
                     placeholder='Enter country'

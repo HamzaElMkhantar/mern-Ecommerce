@@ -24,8 +24,6 @@ function PlaceOrderScreen() {
     const userInfo = JSON.parse(localStorage.getItem('userInfo'))
                         ? JSON.parse(localStorage.getItem('userInfo'))
                         : null
-
-                        console.log(cartItems)
     const addDecimals = (num) => {
         return (Math.round(num*100)/100).toFixed(2)
     }
@@ -66,7 +64,7 @@ function PlaceOrderScreen() {
     }
 
   return (
-    <div>
+    <div className='contner'>
         <CheckOutSteps step1 step2 step3 step4 />
         <Row style={{marginTop:'50px'}} >
             <Col md={8} >

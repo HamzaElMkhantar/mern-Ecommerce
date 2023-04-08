@@ -5,13 +5,14 @@ import Rating from './Rating'
 
 function Product({product}) {
 
+    console.log(product)
     const cardStyle = { 
         textDecorationLine:'none'
     }
   return (
         <Link style={cardStyle} to={`/product/${product._id}`} >
           <Card style={{height:'92%'}} className='mb-1 p-3 rounded-4'>
-                <Card.Img className='rounded-4' variant="top" src={product.image} />
+                <Card.Img name='image' style={{height:'200px' , objectFit:'contain'}} className='rounded-4' variant="top" src={product.image} />
                 <Card.Body>
                     <Card.Title as='div' >{product.name}</Card.Title>
                     <Card.Text as='div' >

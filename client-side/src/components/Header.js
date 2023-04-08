@@ -21,7 +21,7 @@ function Header() {
   
   console.log(userLogin)
   return (
-    <header>
+    <header className='' style={{position:'fixed' , width:'100%' , zIndex:'999' , top:'0'}}>
       <Navbar style={{height:'60px'}} bg="dark" variant="dark">
         <Container style={{justifyContent:'space-between !important' , width:'80%'}} className='d-flex'>
             <LinkContainer to='/'>
@@ -42,6 +42,9 @@ function Header() {
                   <NavDropdown title={userInfo.name} id='username' >
                       <LinkContainer to='/profile' >
                           <NavDropdown.Item>Profile</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to={`/sellerdashboard/${userInfo._id}`} >
+                          <NavDropdown.Item>Seller Dashboard</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Item onClick={() => logOutHandler()} >LogOut</NavDropdown.Item>
                   </NavDropdown>

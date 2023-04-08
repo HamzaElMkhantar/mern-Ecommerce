@@ -37,12 +37,12 @@ const productSchema = mongoose.Schema({
     reviews:[reviewSchema],
     rating: {
         type: Number ,
-        required : true ,
+        // required : true ,
         default: 0
     },
     numReviews: {
         type: Number ,
-        required : true,
+        // required : true,
         default: 0
     },
     price: {
@@ -62,3 +62,5 @@ const productSchema = mongoose.Schema({
 const Product = mongoose.model('Product' , productSchema)
 
 module.exports = Product
+
+// Product.collection.remove()

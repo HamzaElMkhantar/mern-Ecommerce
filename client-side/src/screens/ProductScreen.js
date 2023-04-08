@@ -20,7 +20,7 @@ function ProductScreen({props}) {
 
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
-    const {error , loading , product} = productDetails
+    const {error , loading , product } = productDetails
 
     console.log(product)
     
@@ -35,13 +35,13 @@ function ProductScreen({props}) {
     } , [id , dispatch] )
 
   return (
-    <div>
+    <div className='contner'>
         <Link style={{textDecoration:'none' , backgroundColor:'#252E3B' , color:'lightgray' , fontSize:'20px' , padding:'5px 10px' , borderRadius:'.3rem' }} to='/'>
             Go Back
         </Link>
         <Row className='mt-4' >
-            <Col lg={6} >
-                <Image style={{borderRadius:'0rem'}} src={`${product.image}`} fluid />
+            <Col lg={6} className='' style={{overflow:'hidden' , margin:'auto 0px' , maxHeight:'450px'}}>
+                <Image style={{borderRadius:'0rem'}} src={product.image} fluid />
             </Col>
             <Col lg={6} >
 

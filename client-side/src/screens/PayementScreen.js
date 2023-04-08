@@ -27,7 +27,7 @@ function PayementScreen() {
     }
 
   return (
-    <Row  style={{marginTop:'50px' }}  >
+    <Row className='contner' style={{marginTop:'50px' }}  >
     <CheckOutSteps step1 step2 step3 />
         <Col md={12}>
     <FormContainer  >

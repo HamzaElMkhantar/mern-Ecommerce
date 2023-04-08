@@ -30,7 +30,6 @@ const addOrderItems = expressAsyncHandler( async (req, res) => {
         })
 
         const orderCreated = await order.save() 
-
         res.status(201).json(orderCreated)
     }
 
@@ -74,8 +73,53 @@ const updateOrderToPaid = expressAsyncHandler( async (req, res) => {
     }
 })
 
+// const getUserOrder = expressAsyncHandler( async (req,res)=> {
+
+//     const userId = req.params.id
+//     const userOrder = await Order.find({ user : userId })
+
+//     if(userOrder){
+//         res.json(userOrder)
+//     }else{
+//         res.status(404)
+//         throw new Error('order not found')
+//     }
+
+    
+    
+// })
+
+const getUserOrder = expressAsyncHandler(async (req, res) => {
+    const userId = req.params.id;
+    const userOrder = await Order.find({ user: userId });
+  
+    console.log(userId)
+
+    if (userOrder) {
+      res.json(userOrder);
+    } else {
+      res.status(404);
+      throw new Error('order not found');
+    }
+  });
+  
+
+  const deleteOrder = expressAsyncHandler( async (req, res) => {
+    const orderId = req.body.id
+
+    const deletedOrder = await Order.findOneAndDelete(orderId)
+
+    if(deleteOrder){
+        res.status(200).json( {message : 'order delete success'})
+    }else{
+        res.send('order not found')
+    }
+  })
+
 module.exports = {
     addOrderItems,
     getOrderById,
-    updateOrderToPaid
+    updateOrderToPaid,
+    getUserOrder,
+    deleteOrder
 }

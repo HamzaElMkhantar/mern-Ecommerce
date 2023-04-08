@@ -38,21 +38,18 @@ const CartScreen = () => {
   const navigate = useNavigate()
   const checkoutHandler = async () => {
     if(!userInfo){
-      // navigate('/login?redirect=/shipping')
       navigate('/login')
     }else{
       navigate('/shipping')
-      // await dispatch(addToCart(productId, qty))
     }
   }
 
   if(!userInfo){
-    // navigate('/login?redirect=/shipping')
     navigate('/login')
   }
 
   return (
-    <Row>
+    <Row className='contner'>
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (

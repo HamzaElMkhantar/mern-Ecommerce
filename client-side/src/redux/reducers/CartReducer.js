@@ -3,7 +3,7 @@ import { CART_ADD_ITEM ,
           CART_SAVE_PAYEMENT_METHOD,
           CART_SAVE_SHIPPIN_ADDRESS } from "../constantsProduct./coonstantCart";
 
-export const cartReducer = (state = { cartItems : [], shippingAddress: {} } , action) => {
+export const cartReducer = (state = { cartItems : [] , shippingAddress: {} } , action) => {
     switch(action.type){
         case CART_ADD_ITEM:
             const item = action.payload
