@@ -76,6 +76,14 @@ app.use('/api/config/paypal', (req, res) =>
     res.send(process.env.PAYPAL_CLIENT_ID)
 )
 
+// static files ---
+app.use(express.static(path.join(__dirname, "../client-side/build")))
+app.get("*" , (req, res) => {
+    res.sendFile(path.join(__dirname, '../client-side/build/index.html'))
+})
+
+
+// ---------
 const PORT = process.env.PORT || 4500
 
 app.listen(
