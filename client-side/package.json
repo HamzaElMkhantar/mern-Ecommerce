@@ -1,5 +1,5 @@
 {
-  "homepage": "http://HamzaElMkhantar.github.io/OurShop.store",
+
   "name": "client-side",
   "proxy": "http://192.168.1.3:4500",
   "version": "0.1.0",
