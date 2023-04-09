@@ -29,7 +29,7 @@ function PayementScreen() {
     }
 
   return (
-    <Row className='contner' style={{marginTop:'50px' }}  >
+    <Row className='contner mx-auto' style={{marginTop:'50px' }}  >
     <CheckOutSteps step1 step2 step3 />
         <Col md={12}>
     <FormContainer  >

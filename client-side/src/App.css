@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+a{
+  color: #4b4b4b !important;
+}
+.whiteColor{
+  color: #dedde1 !important;
+}
+#username {
+  color: #f9f9f9 !important;
 }
 .contner{
   width: 80%;
@@ -96,7 +106,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  /* align-items: end; */
   list-style: none;
   margin-top: 50px;
   margin-right: -5px;

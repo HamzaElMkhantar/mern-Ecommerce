@@ -23,30 +23,30 @@ function Header() {
   
   console.log(userLogin)
   return (
-    <header className='' style={{position:'fixed' , width:'100%' , zIndex:'999' , top:'0'}}>
+    <header className='header' style={{position:'fixed' , width:'100%' , zIndex:'999' , top:'0'}}>
       <Navbar style={{height:'60px'}} bg="dark" variant="dark">
         <Container style={{justifyContent:'space-between !important' , width:'80%'}} className='d-flex'>
             <LinkContainer to='/'>
-                <Navbar.Brand>Our Shop</Navbar.Brand>
+                <Navbar.Brand className='whiteColor' >Our Shop</Navbar.Brand>
             </LinkContainer>
             <Nav className="me-ato">
                 <LinkContainer to='/cart'>
-                    <Nav.Link >
-                      <i className="fa-solid fa-cart-shopping"></i> Cart
+                    <Nav.Link className='whiteColor' >
+                      <i className="fa-solid fa-cart-shopping whiteColor"></i> Cart
                     </Nav.Link>
                 </LinkContainer>
                 { !userInfo ? (<LinkContainer to='/login'>
-                    <Nav.Link >
-                      <i className="fa-solid fa-user"></i>  Sign In
+                    <Nav.Link className='whiteColor' >
+                      <i className="fa-solid fa-user whiteColor"></i>  Sign In
                     </Nav.Link>
                 </LinkContainer>) 
                 : (
-                  <NavDropdown title={userInfo.name} id='username' >
+                  <NavDropdown className='whiteColor'  title={userInfo.name} id='username' >
                       <LinkContainer to='/profile' >
-                          <NavDropdown.Item>Profile</NavDropdown.Item>
+                          <NavDropdown.Item >Profile</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to={`/sellerdashboard/${userInfo._id}`} >
-                          <NavDropdown.Item>Seller Dashboard</NavDropdown.Item>
+                          <NavDropdown.Item >Seller Dashboard</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Item onClick={() => logOutHandler()} >LogOut</NavDropdown.Item>
                   </NavDropdown>

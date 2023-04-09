@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../redux/actions/productsAction'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function HomeScreen() {

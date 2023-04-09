@@ -51,7 +51,7 @@ const CartScreen = () => {
   }
 
   return (
-    <Row className='contner'>
+    <Row className='contner mx-auto'>
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (

@@ -31,7 +31,7 @@ function ShippinScreen() {
     }
 
   return (
-    <Row  className='contner' >
+    <Row  className='contner mx-auto' >
     <CheckOutSteps step1 step2 />
         <Col md={12}>
     <FormContainer  >

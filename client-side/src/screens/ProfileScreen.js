@@ -97,7 +97,7 @@ useEffect(() => {
    
    
   return (
-    <Row className='contner'>
+    <Row className='contner mx-auto'>
       <Col md={4}>
         <h2 style={{textAlign:'center' , marginTop:'40px'}}  >Update Profile</h2>
         {message && <Message variant='success'>{message}</Message>}
