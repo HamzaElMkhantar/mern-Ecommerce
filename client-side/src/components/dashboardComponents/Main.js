@@ -5,6 +5,8 @@ import { deleteOrderProfile, getUserOrder } from '../../redux/actions/orderActio
 import { getUserProduct } from '../../redux/actions/productsAction'
 import { Button, Col, Row } from 'react-bootstrap'
 import Chart from "react-apexcharts";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 

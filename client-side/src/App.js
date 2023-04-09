@@ -17,6 +17,8 @@ import UserDashboard from './screens/DashboardScreens/UserDashboard';
 import AddProducts from './components/dashboardComponents/AddProducts';
 import OrdersDashboard from './components/dashboardComponents/OrderDashboard';
 import ProductsDashboard from './components/dashboardComponents/ProductsDashboard';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {

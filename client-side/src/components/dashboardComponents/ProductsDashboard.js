@@ -5,6 +5,8 @@ import { Button, Form } from 'react-bootstrap'
 import SideBar from './SideBar'
 import Message from '../Message'
 import FormContainer from '../FormContainer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function ProductsDashboard() {
 

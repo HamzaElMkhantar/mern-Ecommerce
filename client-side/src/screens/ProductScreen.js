@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProductsDetails } from '../redux/actions/productsAction';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function ProductScreen({props}) {

@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import {LinkContainer} from 'react-router-bootstrap'
 import { logout } from '../redux/actions/userAction';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Header() {
   const dispatch = useDispatch()

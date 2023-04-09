@@ -1,12 +1,13 @@
-import { Button } from 'bootstrap'
+
 import React, { useEffect } from 'react'
 import { Row , Col, ListGroupItem, ListGroup , Image} from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { LinkContainer } from 'react-router-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import CheckOutSteps from '../components/CheckOutSteps'
 import Message from '../components/Message'
 import { createdOrder } from '../redux/actions/orderAction'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function PlaceOrderScreen() {
 

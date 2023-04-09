@@ -5,6 +5,8 @@ import Message from '../Message'
 import { deleteOrderProfile, getUserOrder } from '../../redux/actions/orderAction'
 import { useDispatch, useSelector } from 'react-redux'
 import SideBar from './SideBar'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const  OrdersDashboard = () => {

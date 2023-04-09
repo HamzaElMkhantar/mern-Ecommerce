@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import FormContainer from '../components/FormContainer'
 import CheckOutSteps from '../components/CheckOutSteps'
 import {savePayementMethod} from '../redux/actions/cartAction'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function PayementScreen() {
 

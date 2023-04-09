@@ -6,6 +6,8 @@ import FormContainer from '../components/FormContainer'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import {  login } from '../redux/actions/userAction'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function LoginScreen() {
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../../App.css'
 // import { SidearData } from '../../../public/SidearData'
 import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SideBar() {
 

@@ -6,6 +6,8 @@ import Message from '../../components/Message'
 import { useDispatch, useSelector } from 'react-redux';
 import FormContainer from '../../components/FormContainer'
 import { addProduct } from '../../redux/actions/productsAction';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function AddProducts() {
 

@@ -3,6 +3,7 @@ import {BrowserRouter as Router  , Route, Routes } from 'react-router-dom'
 import SideBar from '../../components/dashboardComponents/SideBar'
 import Main from '../../components//dashboardComponents/Main'
 import AddProducts from '../../components/dashboardComponents/AddProducts'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function UserDashboard() {
   return (

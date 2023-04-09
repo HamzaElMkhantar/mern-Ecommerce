@@ -10,6 +10,8 @@ import { createdOrder , getOrderDeatails , payOrder} from '../redux/actions/orde
 import  { PayPalButton } from 'react-paypal-button-v2'
 import { ORDER_PAY_RESET } from '../redux/constantsProduct./orderConstants'
 import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function OrderScreen() {
 
