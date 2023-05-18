@@ -16,7 +16,7 @@ import { PRODUCT_LIST_FAIL ,
          PRODUCT_UPDATE_REQUIST,
          PRODUCT_UPDATE_SUCCESS,
          PRODUCT_UPDATE_FAIL,
-     } from "../constantsProduct./constantsProduct.";
+     } from "../constants/constantsProduct.js";
 
 export const productListReducer = (state = {products : []} , action) => {
 

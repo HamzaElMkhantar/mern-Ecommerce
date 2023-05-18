@@ -8,7 +8,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { createdOrder , getOrderDeatails , payOrder} from '../redux/actions/orderAction'
 import  { PayPalButton } from 'react-paypal-button-v2'
-import { ORDER_PAY_RESET } from '../redux/constantsProduct./orderConstants'
+import { ORDER_PAY_RESET } from '../redux/constants/orderConstants'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

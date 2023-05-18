@@ -10,7 +10,7 @@ import { userOrderReducer } from '../redux/reducers/orderReducer'
 import { getUserOrder, deleteOrderProfile} from '../redux/actions/orderAction'
 
 import dateFormat from 'dateformat';
-import { ORDER_PAY_RESET } from '../redux/constantsProduct./orderConstants'
+import { ORDER_PAY_RESET } from '../redux/constants/orderConstants'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

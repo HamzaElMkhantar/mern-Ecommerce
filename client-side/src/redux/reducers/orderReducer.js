@@ -15,7 +15,7 @@ import {
     ORDER_DELETE_REQUIST,
     ORDER_DELETE_SUCCESS,
     ORDER_DELETE_FAIL,
-            } from '../constantsProduct./orderConstants'
+            } from '../constants/orderConstants'
 
 export const orderCreateReducer = (state = {} , action) => {
     switch(action.type){

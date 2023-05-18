@@ -1,7 +1,7 @@
 import { CART_ADD_ITEM , 
           CART_REMOVE_ITEM,
           CART_SAVE_PAYEMENT_METHOD,
-          CART_SAVE_SHIPPIN_ADDRESS } from "../constantsProduct./coonstantCart";
+          CART_SAVE_SHIPPIN_ADDRESS } from "../constants/coonstantCart";
 
 export const cartReducer = (state = { cartItems : [] , shippingAddress: {} } , action) => {
     switch(action.type){

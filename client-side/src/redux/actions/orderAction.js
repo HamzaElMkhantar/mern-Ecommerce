@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { config } from 'dotenv'
-import { ORDER_USER_SUCCESS } from '../constantsProduct./orderConstants'
-import { ORDER_USER_REQUIST } from '../constantsProduct./orderConstants'
-import { ORDER_USER_FAIL } from '../constantsProduct./orderConstants'
+import { ORDER_USER_SUCCESS } from '../constants/orderConstants'
+import { ORDER_USER_REQUIST } from '../constants/orderConstants'
+import { ORDER_USER_FAIL } from '../constants/orderConstants'
 
 import {
     ORDER_CREATE_REQUIST,
@@ -17,11 +17,13 @@ import {
     ORDER_DELETE_REQUIST,
     ORDER_DELETE_SUCCESS,
     ORDER_DELETE_FAIL,
-            } from '../constantsProduct./orderConstants'
+            } from '../constants/orderConstants'
 
 export const createdOrder = (order) => async (dispatch, getState) => {
+
     const {userLogin} = getState()
     const userInfo = userLogin.userInfo || JSON.parse(localStorage.getItem('userInfo'))
+    
     console.log(order)
     try{
         dispatch({

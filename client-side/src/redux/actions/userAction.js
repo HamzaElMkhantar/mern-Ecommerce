@@ -10,7 +10,7 @@ import { USER_LOGIN_REQUIST,
          USER_DETAILS_SUCCESS,
          USER_UPDATE_PROFILE_REQUIST,
          USER_UPDATE_PROFILE_SUCCESS,
-         USER_UPDATE_PROFILE_FAIL} from "../constantsProduct./userConstants";
+         USER_UPDATE_PROFILE_FAIL} from "../constants/userConstants";
 import axios from 'axios'
 import { Action } from "@remix-run/router";
 
